@@ -1,5 +1,5 @@
 # El objetivo de este manifest es ver como hacer un simplisimo Pod y tambien demostrar que en un mismo archivo pueden ir varias definiciones separadas por "---"
-# - Para la seccioon containers.command vale la pena mencionar lo siguiente:
+# -  Para la seccioon containers.command vale la pena mencionar lo siguiente:
 #       * command = ENTRYPOINT en docker
 #       * args    = CMD en docker
 #    Ejemplos :
@@ -8,6 +8,7 @@
 #
 #        command: ["printenv"]
 #        args: ["HOSTNAME", "KUBERNETES_PORT"]
+#    Referencia: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes
 
 apiVersion: v1
 kind: Pod
