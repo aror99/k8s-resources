@@ -1,3 +1,6 @@
+# Manifest para mostrar cuando hay dos contenedores en un solo pod (usualmente les llamarian sidecar containers)
+# - En este ejemplo, lo que se demostraría es que dos contenedores no pueden escuchar en el mismo puerto, porque comparten la red, pero si pueden escribir porque sus filesystems son independientes por contenedor
+# - Recordar que los namespaces compartidos son IPC, Networn y UTS (hostname).
 apiVersion: v1
 kind: Pod
 metadata:
