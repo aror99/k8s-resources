@@ -1,3 +1,4 @@
+# El objetivo de este manifest es ver como hacer un simplisimo Pod y tambien demostrar que en un mismo archivo pueden ir varias definiciones separadas por "---"
 apiVersion: v1
 kind: Pod
 metadata:
