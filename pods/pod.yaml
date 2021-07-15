@@ -6,6 +6,7 @@ spec:
   containers:
   - name: cont1
     image: nginx:alpine
+    #command: ['sh','-c','echo Hola && sleep 3000']
 ---
 apiVersion: v1
 kind: Pod
