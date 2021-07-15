@@ -1,4 +1,14 @@
 # El objetivo de este manifest es ver como hacer un simplisimo Pod y tambien demostrar que en un mismo archivo pueden ir varias definiciones separadas por "---"
+# - Para la seccioon containers.command vale la pena mencionar lo siguiente:
+#       * command = ENTRYPOINT en docker
+#       * args    = CMD en docker
+#    Ejemplos :
+#        command: ["/bin/sh"]
+#        args: ["-c", "while true; do echo hello; sleep 10;done"]
+#
+#        command: ["printenv"]
+#        args: ["HOSTNAME", "KUBERNETES_PORT"]
+
 apiVersion: v1
 kind: Pod
 metadata:
