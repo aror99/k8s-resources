@@ -1,7 +1,10 @@
+# Manifest para demostrar las labels y que son una chulada que se usa para agarrar pods sin importar que traigan y masivamente, labels son geniales, aprendete eso
+
 apiVersion: v1
 kind: Pod
 metadata:
   name: podtest2
+  # Lo importantes esta aqui:  
   labels:
     app: front
     env: dev
@@ -14,6 +17,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: podtest3
+  # Lo importantes esta aqui:    
   labels:
     app: backend
     env: dev
@@ -26,6 +30,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: podtest4
+  # Lo importantes esta aqui:    
   labels:
     app: backend
     env: dev
