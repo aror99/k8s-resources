@@ -1,16 +1,23 @@
+# Manifest para ver la creación basica de un ReplicaSet (es como ejemplo ya que el objeto bueno y que se usa mucho y casi siempre es el Deployment)
+# - ¿Porque en apiVersion dice apps(v1?: Si vemos "kubectl api-resources" se puede ubicar que en ese cluster, para generar un Kind ReplicaSet, se debe usar esa apiVersion
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
+  #Nombre del ReplicaSet
   name: rs-test
+  #Labels propios del ReplicaSet
   labels:
     app: rs-test
 spec:
   replicas: 3
   selector:
+    #Son los slectores por los que el ReplicaSet va a buscar a los Pods, es una parte crucial. Estos valores deben coincidir con los Labels del Pod (mas abajo)
     matchLabels:
       app: pod-label
+  #De aqui en adelante se refiere a definiciones del Pod
   template:
     metadata:
+      #Labels del Pod
       labels:
         app: pod-label
     spec:
